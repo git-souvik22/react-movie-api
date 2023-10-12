@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+a. npm init >> npm start.
+
+b. createAsyncThunk redux module was used to manage and call the movies data and to persist the data I've used persistReducer from redux-persist.
+
+c. I would do pagination and filtration functionality.
 
 ## Available Scripts
 
