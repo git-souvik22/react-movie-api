@@ -210,11 +210,11 @@ const Home = () => {
             </div>
           </div>
           <div className="col py-3" style={{ backgroundColor: "#E7E8ED" }}>
-            <div className="four-divs d-flex justify-content-around">
+            <div className="four-divs d-flex justify-content-around gap-3 px-4">
               {cdata.map((elem, index) => (
                 <div
-                  className="bg-light d-flex justify-content-around p-3"
-                  style={{ width: "240px", borderRadius: "10px" }}
+                  className="bg-light d-flex justify-content-around p-3 w-25"
+                  style={{ borderRadius: "10px" }}
                   key={index}
                 >
                   <div className="four-images p-2">
@@ -233,6 +233,42 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="d-flex gap-4 px-4 my-4">
+              <div className="bg-light w-75 p-3 rounded-4">
+                <div className="d-flex justify-content-between">
+                  <div>
+                    <h3 className="fs-4 fw-bold">Overview</h3>
+                  </div>
+                  <div className="btn-group">
+                    <button
+                      type="button"
+                      className="btn btn-light dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Querterly
+                    </button>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Anually
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Monthly
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="text-secondary">Montly Earnings</p>
+              </div>
+              <div className="bg-light w-25 p-3 rounded-4">
+                <p className="fs-4 fw-bold">Customers</p>
+                <p className="text-secondary">Customers that buy Products</p>
+              </div>
             </div>
           </div>
         </div>
