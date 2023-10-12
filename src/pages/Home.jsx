@@ -213,7 +213,7 @@ const Home = () => {
             <div className="four-divs d-flex justify-content-around">
               {cdata.map((elem, index) => (
                 <div
-                  className="bg-light d-flex"
+                  className="bg-light d-flex justify-content-around p-3"
                   style={{ width: "240px", borderRadius: "10px" }}
                   key={index}
                 >
