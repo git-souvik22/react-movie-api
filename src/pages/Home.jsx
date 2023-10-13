@@ -279,22 +279,29 @@ const Home = () => {
                 <p className="text-secondary">Montly Earnings</p>
 
                 <div
-                  className="bar-graph border border-dark w-100 d-flex align-items-baseline"
+                  className="bar-graph w-100 d-flex align-items-baseline justify-content-around mb-4"
                   style={{ height: "250px" }}
                 >
                   {barGraph.map((bar, index) => (
-                    <>
+                    <div className="d-flex flex-column align-items-center">
                       <div
                         style={{
-                          width: "35px",
+                          width: "40px",
                           height: `${(250 * bar.percentage) / 100}px`,
-                          backgroundColor: "blueviolet",
+                          backgroundColor: "#E7E8ED",
                           borderRadius: "10px",
                         }}
                         key={index}
                       ></div>
-                      <p className="m-0 p-0 text-secondary">{bar.month}</p>
-                    </>
+                      <div>
+                        <p className=" text-secondary fw-semibold">
+                          {bar.month
+                            .at(0)
+                            .toUpperCase()
+                            .concat(...bar.month.slice(1, 3))}
+                        </p>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
