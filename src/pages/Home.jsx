@@ -187,7 +187,7 @@ const Home = () => {
                     height={30}
                     className="rounded-circle"
                   />
-                  <span className="d-none d-sm-inline mx-1">loser</span>
+                  <span className="d-none d-sm-inline mx-1">Yasveer</span>
                 </a>
                 <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
                   <li>
@@ -315,15 +315,15 @@ const Home = () => {
 
             <div className="product-details-div px-4">
               <div className="bg-light p-3 rounded-4">
-                <div className="d-flex">
+                <div className="d-flex product-details-head">
                   <p className="fs-4 fw-semibold m-0 p-0">Product Sell</p>
-                  <div className="d-flex">
+                  <div className="d-flex ms-auto px-2 gap-2">
                     <div class="inputs">
                       <i class="fa fa-search"></i>
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Search Tasks..."
+                        placeholder="Search..."
                       />
                     </div>
                     <div className="btn-group">
@@ -356,6 +356,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
+                {/* Product details starts form here  */}
+                <div className="mt-2">Products Order history comes here...</div>
               </div>
             </div>
           </div>
