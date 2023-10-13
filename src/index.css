@@ -13,3 +13,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.inputs {
+  position: relative;
+}
+
+.form-control {
+  text-indent: 15px;
+  border: none;
+  height: 45px;
+  border-radius: 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #eee;
+  outline: 0;
+  box-shadow: none;
+  border-bottom: 1px solid blue;
+}

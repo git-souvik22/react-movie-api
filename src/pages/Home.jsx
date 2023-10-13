@@ -3,6 +3,7 @@ import earning from "./assets/earning.png";
 import order from "./assets/orders.png";
 import balance from "./assets/balance.jpg";
 import totalSale from "./assets/total-sales.png";
+import "../index.css";
 
 const cdata = [
   {
@@ -245,7 +246,7 @@ const Home = () => {
               <div className="bg-light w-75 p-3 rounded-4">
                 <div className="d-flex justify-content-between">
                   <div>
-                    <h3 className="fs-4 fw-bold">Overview</h3>
+                    <h3 className="fs-4 fw-semibold">Overview</h3>
                   </div>
                   <div className="btn-group">
                     <button
@@ -306,9 +307,55 @@ const Home = () => {
                 </div>
               </div>
               <div className="bg-light w-25 p-3 rounded-4">
-                <p className="fs-4 fw-bold m-0 p-0">Customers</p>
+                <p className="fs-4 fw-semibold m-0 p-0">Customers</p>
                 <p className="text-secondary">Customers that buy Products</p>
                 <div>Donut Chart comes here....</div>
+              </div>
+            </div>
+
+            <div className="product-details-div px-4">
+              <div className="bg-light p-3 rounded-4">
+                <div className="d-flex">
+                  <p className="fs-4 fw-semibold m-0 p-0">Product Sell</p>
+                  <div className="d-flex">
+                    <div class="inputs">
+                      <i class="fa fa-search"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search Tasks..."
+                      />
+                    </div>
+                    <div className="btn-group">
+                      <button
+                        type="button"
+                        className="btn btn-light dropdown-toggle text-secondary"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        30 days
+                      </button>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <a
+                            className="dropdown-item text-secondary"
+                            href="#drop"
+                          >
+                            7 days
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="dropdown-item text-secondary"
+                            href="#drop"
+                          >
+                            3 months
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
