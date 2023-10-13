@@ -308,6 +308,7 @@ const Home = () => {
               <div className="bg-light w-25 p-3 rounded-4">
                 <p className="fs-4 fw-bold m-0 p-0">Customers</p>
                 <p className="text-secondary">Customers that buy Products</p>
+                <div>Donut Chart comes here....</div>
               </div>
             </div>
           </div>
