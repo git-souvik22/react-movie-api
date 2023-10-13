@@ -31,6 +31,21 @@ const cdata = [
   },
 ];
 
+const barGraph = [
+  { month: "jan", percentage: 50 },
+  { month: "feb", percentage: 65 },
+  { month: "mar", percentage: 40 },
+  { month: "apr", percentage: 72 },
+  { month: "may", percentage: 84 },
+  { month: "jun", percentage: 93 },
+  { month: "jul", percentage: 38 },
+  { month: "aug", percentage: 59 },
+  { month: "sep", percentage: 75 },
+  { month: "oct", percentage: 89 },
+  { month: "nov", percentage: 97 },
+  { month: "dec", percentage: 68 },
+];
+
 const Home = () => {
   return (
     <>
@@ -235,7 +250,7 @@ const Home = () => {
                   <div className="btn-group">
                     <button
                       type="button"
-                      className="btn btn-light dropdown-toggle"
+                      className="btn btn-light dropdown-toggle text-secondary"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
@@ -243,12 +258,18 @@ const Home = () => {
                     </button>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a
+                          className="dropdown-item text-secondary"
+                          href="#drop"
+                        >
                           Anually
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a
+                          className="dropdown-item text-secondary"
+                          href="#drop"
+                        >
                           Monthly
                         </a>
                       </li>
@@ -256,9 +277,29 @@ const Home = () => {
                   </div>
                 </div>
                 <p className="text-secondary">Montly Earnings</p>
+
+                <div
+                  className="bar-graph border border-dark w-100 d-flex align-items-baseline"
+                  style={{ height: "250px" }}
+                >
+                  {barGraph.map((bar, index) => (
+                    <>
+                      <div
+                        style={{
+                          width: "35px",
+                          height: `${(250 * bar.percentage) / 100}px`,
+                          backgroundColor: "blueviolet",
+                          borderRadius: "10px",
+                        }}
+                        key={index}
+                      ></div>
+                      <p className="m-0 p-0 text-secondary">{bar.month}</p>
+                    </>
+                  ))}
+                </div>
               </div>
               <div className="bg-light w-25 p-3 rounded-4">
-                <p className="fs-4 fw-bold">Customers</p>
+                <p className="fs-4 fw-bold m-0 p-0">Customers</p>
                 <p className="text-secondary">Customers that buy Products</p>
               </div>
             </div>
